@@ -1,5 +1,4 @@
 {
   "schemaVersion": 2,
-  "dockerfilePath": "node/16",
-  "captainVersion": "2"
+  "templateId": "node/22.2.0"
 }
