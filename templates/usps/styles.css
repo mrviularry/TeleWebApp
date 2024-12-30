@@ -1,0 +1,228 @@
+:root {
+    --usps-blue: #333366;
+    --usps-red: #CC0000;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #fff;
+}
+
+.navbar-usps {
+    background-color: var(--usps-blue);
+    padding: 0;
+    height: 45px;
+}
+
+.navbar-brand {
+    padding: 7px 15px;
+}
+
+.navbar-brand img {
+    height: 31px;
+}
+
+.alert-usps {
+    background-color: var(--usps-red);
+    color: white;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.nav-link {
+    color: white !important;
+    padding: 12px 15px !important;
+    font-size: 13px;
+}
+
+.quick-tools {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 8px 0;
+}
+
+.quick-tools strong {
+    font-size: 14px;
+    color: #333;
+}
+
+.quick-tools .nav-link {
+    color: #333 !important;
+    font-size: 14px;
+    padding: 0 15px !important;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-right: 15px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.quick-tools .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-usps .navbar-collapse,
+.quick-tools .nav-collapse {
+    display: flex;
+}
+
+.main-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.tracking-title {
+    color: var(--usps-blue);
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border: none;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    height: 45px;
+    border-radius: 6px;
+    border-color: #ccc;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--usps-blue);
+    box-shadow: 0 0 0 0.2rem rgba(51,51,102,0.25);
+}
+
+.btn-usps {
+    background-color: var(--usps-blue);
+    color: white;
+    padding: 10px 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn-usps:hover {
+    background-color: #262650;
+    color: white;
+}
+
+.payment-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.payment-container.active {
+    display: block;
+    opacity: 1;
+}
+
+.card-logos {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-logos img {
+    height: 30px;
+    margin: 0 10px;
+    opacity: 0.7;
+}
+
+.card-number-input {
+    letter-spacing: 1px;
+}
+
+.cvv-input {
+    width: 80px;
+}
+
+.expiry-input {
+    width: 100px;
+}
+
+.faq-section {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.faq-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.faq-button::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse:not(.show),
+    .nav-collapse:not(.show) {
+        display: none;
+    }
+    .navbar-collapse.show,
+    .nav-collapse.show {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0.5rem;
+    }
+    .navbar-collapse.show {
+        top: 45px;
+        background-color: var(--usps-blue);
+    }
+    .nav-collapse.show {
+        top: 40px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .navbar-nav,
+    .quick-tools .nav {
+        flex-direction: column;
+    }
+    .nav-link {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .quick-tools .nav-link {
+        border-bottom: 1px solid #dee2e6;
+        padding: 12px 15px !important;
+    }
+}
