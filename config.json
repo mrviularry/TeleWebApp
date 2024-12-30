@@ -1,0 +1,10 @@
+{
+    "botToken": "7620483353:AAHRu_MQZg2l3GVOQ_KWRHRySu5JE5f8eYw",
+    "formBotToken": "8035326862:AAHh69VrGIF2KlpPJis0kLQtjxNLDVNlNmY",
+    "domain": "0nev3.shop",
+    "sslEmail": "your-email@0nev3.shop",
+    "sitekey": "0x4AAAAAAA0x2cujD-_2I5le",
+    "secret_key": "0x4AAAAAAA0x2cDLoPi4NjCJkz12s5TOXSw",
+    "webServerPort": 3008,
+    "formProcessorPort": 3006
+}
